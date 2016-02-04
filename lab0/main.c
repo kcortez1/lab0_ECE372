@@ -20,13 +20,13 @@
 
 int led = 0;
 
-//TODO: Define states of the state machine
+//Define states of the state machine
 typedef enum stateTypeEnum{
     init, previousLED, nextLED, waitForButtonPush, waitForButtonRelease
 } stateType;
 
-volatile stateType state = init;
 //Use volatile variables that change within interrupts
+volatile stateType state = init;
 
 int main() {
     
@@ -86,11 +86,9 @@ int main() {
                     break;
                     
                 case waitForButtonPush:
-
                     break;
                     
                 case waitForButtonRelease:
-                     
                     break;
         }    
     }
